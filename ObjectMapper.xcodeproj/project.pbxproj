@@ -78,6 +78,9 @@
 		6ACB15D21BC7F1D0006C029C /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACB15D11BC7F1D0006C029C /* Map.swift */; };
 		6ACB15D31BC7F1D0006C029C /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACB15D11BC7F1D0006C029C /* Map.swift */; };
 		6ACB15D41BC7F1D0006C029C /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACB15D11BC7F1D0006C029C /* Map.swift */; };
+		7D8711001C8F424700814BE4 /* BasicTypesTestsFromJSONStrict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8710FF1C8F424700814BE4 /* BasicTypesTestsFromJSONStrict.swift */; };
+		7D8711011C8F424700814BE4 /* BasicTypesTestsFromJSONStrict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8710FF1C8F424700814BE4 /* BasicTypesTestsFromJSONStrict.swift */; };
+		7D8711021C8F424700814BE4 /* BasicTypesTestsFromJSONStrict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8710FF1C8F424700814BE4 /* BasicTypesTestsFromJSONStrict.swift */; };
 		891804CD1C122AF000E5C3EE /* MappableTypesWithTransformsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891804CC1C122AF000E5C3EE /* MappableTypesWithTransformsTests.swift */; };
 		891804CE1C122AF000E5C3EE /* MappableTypesWithTransformsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891804CC1C122AF000E5C3EE /* MappableTypesWithTransformsTests.swift */; };
 		891804CF1C122AF000E5C3EE /* MappableTypesWithTransformsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891804CC1C122AF000E5C3EE /* MappableTypesWithTransformsTests.swift */; };
@@ -188,6 +191,7 @@
 		6AAC8FC719F048FE00E7A677 /* ToJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ToJSON.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		6AAC8FCB19F048FE00E7A677 /* DateTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTransform.swift; sourceTree = "<group>"; };
 		6ACB15D11BC7F1D0006C029C /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		7D8710FF1C8F424700814BE4 /* BasicTypesTestsFromJSONStrict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTypesTestsFromJSONStrict.swift; sourceTree = "<group>"; };
 		891804CC1C122AF000E5C3EE /* MappableTypesWithTransformsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappableTypesWithTransformsTests.swift; sourceTree = "<group>"; };
 		BC1E7F361ABC44C000F9B1CF /* EnumTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumTransform.swift; sourceTree = "<group>"; };
 		CD1602FF1AC023D5000CD69A /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,6 +318,7 @@
 			children = (
 				6A6AEB971A9387D0002573D3 /* BasicTypes.swift */,
 				6A6AEB951A93874F002573D3 /* BasicTypesTestsFromJSON.swift */,
+				7D8710FF1C8F424700814BE4 /* BasicTypesTestsFromJSONStrict.swift */,
 				6A3774331A31427F00CC0AB5 /* BasicTypesTestsToJSON.swift */,
 				6A412A161BAC770C001C3F67 /* ClassClusterTests.swift */,
 				6A51372E1AADE12C00B82516 /* CustomTransformTests.swift */,
@@ -672,6 +677,7 @@
 				6AC692431BE3FD45004C119A /* BasicTypesTestsToJSON.swift in Sources */,
 				6AC692441BE3FD45004C119A /* CustomTransformTests.swift in Sources */,
 				6AC692451BE3FD45004C119A /* NestedKeysTests.swift in Sources */,
+				7D8711021C8F424700814BE4 /* BasicTypesTestsFromJSONStrict.swift in Sources */,
 				6AC692461BE3FD45004C119A /* NestedArrayTests.swift in Sources */,
 				6AC692471BE3FD45004C119A /* ObjectMapperTests.swift in Sources */,
 			);
@@ -733,6 +739,7 @@
 				6A51372F1AADE12C00B82516 /* CustomTransformTests.swift in Sources */,
 				6A6AEB981A9387D0002573D3 /* BasicTypes.swift in Sources */,
 				6A412A241BB0DA26001C3F67 /* PerformanceTests.swift in Sources */,
+				7D8711001C8F424700814BE4 /* BasicTypesTestsFromJSONStrict.swift in Sources */,
 				6AAC8F8619F03C2900E7A677 /* ObjectMapperTests.swift in Sources */,
 				6100B1C01BD76A030011114A /* NestedArrayTests.swift in Sources */,
 			);
@@ -773,6 +780,7 @@
 				CD1603251AC02480000CD69A /* BasicTypes.swift in Sources */,
 				CD16032A1AC02480000CD69A /* ObjectMapperTests.swift in Sources */,
 				CD1603271AC02480000CD69A /* BasicTypesTestsToJSON.swift in Sources */,
+				7D8711011C8F424700814BE4 /* BasicTypesTestsFromJSONStrict.swift in Sources */,
 				6A412A251BB0DA26001C3F67 /* PerformanceTests.swift in Sources */,
 				CD1603281AC02480000CD69A /* CustomTransformTests.swift in Sources */,
 			);

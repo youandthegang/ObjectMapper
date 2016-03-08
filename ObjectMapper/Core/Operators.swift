@@ -61,6 +61,13 @@ public func <- <T>(inout left: T!, right: Map) {
 	switch right.mappingType {
 	case .FromJSON:
 		FromJSON.optionalBasicType(&left, object: right.value())
+		
+		// If the key is missing we should remember that. Implicitly Unwrapped Optionals should never be nil
+		// and the application code should not need to check for nil nor just use entity properties unchecked.
+		if left == nil {
+			right.missingImplicitlyUnwrappedOptionalKeys.append(right.currentKey ?? "Unknown key is missing")
+		}
+		
 	case .ToJSON:
 		ToJSON.optionalBasicType(left, map: right)
 	}
@@ -295,6 +302,13 @@ public func <- <T: Mappable>(inout left: T!, right: Map) {
 	switch right.mappingType {
 	case .FromJSON:
 		FromJSON.optionalObject(&left, map: right)
+		
+		// If the key is missing we should remember that. Implicitly Unwrapped Optionals should never be nil
+		// and the application code should not need to check for nil nor just use entity properties unchecked.
+		if left == nil {
+			right.missingImplicitlyUnwrappedOptionalKeys.append(right.currentKey ?? "Unknown key is missing")
+		}
+		
 	case .ToJSON:
 		ToJSON.optionalObject(left, map: right)
 	}

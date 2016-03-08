@@ -36,7 +36,13 @@ public enum MappingType {
 /// The Mapper class provides methods for converting Model objects to JSON and methods for converting JSON to Model objects
 public final class Mapper<N: Mappable> {
 	
-	public init(){}
+	// The user should have the option to get nil when mapping of implicitly unwrapped optionals fails. 
+	// Otherwise the user code would need nil-checks to avoid crashing.
+	private let beStrictAboutImplicitlyUnwrappedOptionals: Bool
+	
+	public init(strict: Bool = false){
+		beStrictAboutImplicitlyUnwrappedOptionals = strict
+	}
 	
 	// MARK: Mapping functions that map to an existing object toObject
 	
@@ -107,12 +113,26 @@ public final class Mapper<N: Mappable> {
 		if let klass = N.self as? MappableCluster.Type {
 			if var object = klass.objectForMapping(map) as? N {
 				object.mapping(map)
+				
+				// We do not want anybody to use entities that are missing implicitly unwrapped optionals
+				if beStrictAboutImplicitlyUnwrappedOptionals && map.missingImplicitlyUnwrappedOptionalKeys.count > 0 {
+					map.missingImplicitlyUnwrappedOptionalKeys.forEach({ print("Missing key \($0)") })
+					return nil
+				}
+				
 				return object
 			}
 		}
 		
 		if var object = N(map) {
 			object.mapping(map)
+			
+			// We do not want anybody to use entities that are missing implicitly unwrapped optionals
+			if beStrictAboutImplicitlyUnwrappedOptionals && map.missingImplicitlyUnwrappedOptionalKeys.count > 0 {
+				map.missingImplicitlyUnwrappedOptionalKeys.forEach({ print("Missing key \($0)") })
+				return nil
+			}
+			
 			return object
 		}
 		return nil

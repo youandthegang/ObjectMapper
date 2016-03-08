@@ -34,6 +34,7 @@ public final class Map {
 	public let mappingType: MappingType
 	
 	public internal(set) var JSONDictionary: [String : AnyObject] = [:]
+	public var missingImplicitlyUnwrappedOptionalKeys: [String] = []
 	public var currentValue: AnyObject?
 	var currentKey: String?
 	var keyIsNested = false
